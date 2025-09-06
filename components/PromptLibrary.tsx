@@ -108,7 +108,7 @@ const PromptLibrary: React.FC = () => {
         </div>
 
         {/* Stats & Filters */}
-        <div className="sticky top-16 bg-slate-900/80 backdrop-blur-md z-10 py-4 mb-8">
+        <div className="py-4 mb-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div className="flex-1 min-w-0">
               <div className="relative">
@@ -175,11 +175,7 @@ const PromptLibrary: React.FC = () => {
                 </div>
 
                 <div onClick={() => !isReordering && setSelectedCollection(collection)}>
-                    {collection.type === 'image' ? (
-                        <img src={collection.thumbnailUrl} alt={collection.title} className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110" />
-                    ) : (
-                        <video src={collection.thumbnailUrl} muted loop playsInline className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110" />
-                    )}
+                    <img src={collection.thumbnailUrl} alt={collection.title} className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-4">
                         <div className="flex items-center gap-2 mb-1">
